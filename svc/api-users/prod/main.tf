@@ -21,7 +21,7 @@ terraform {
   }
 }
 
-module "ecs_service" {
+module "base" {
   source                 = "../base"
   env                    = local.env
   aws_account_id         = local.aws_account_id

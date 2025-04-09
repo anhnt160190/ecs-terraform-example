@@ -12,9 +12,9 @@ resource "aws_security_group" "ecs_service_sg" {
   depends_on = [module.vpc]
 
   ingress {
-    from_port   = local.container_port
-    to_port     = local.container_port
-    protocol    = "tcp"
+    from_port       = local.container_port
+    to_port         = local.container_port
+    protocol        = "tcp"
     security_groups = [module.alb.alb_sg_id]
   }
 
